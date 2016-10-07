@@ -1,2 +1,6 @@
 /test
 /a.img
+/src/*.o
+/src/kernel
+/src/bootsect
+/src/boot.bin
