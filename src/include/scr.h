@@ -5,14 +5,15 @@
 #define MAX_COLUMNS 80
 #define TAB_WIDTH 8
 
-#define VIDEO_RAM 0x8000
+#define VIDEO_RAM 0xb8000
 /*一行占几个字节，两个字节表示一个字符*/
 #define LINE_RAM (MAX_COLUMNS*2)
 
-#define PAGE_RAM (MAX_LINES*MAX_COLUMNS)
 /*空白字符属性，white fg,black bg = 0x07*/
 #define BLANK_CHAR (' ')
 #define BLANK_ATTR (0x07)
+
+#define CHAR_OFF(x,y)   (LINE_RAM*(y)+2*(x))
 
 typedef enum COLOR_TAG {
 	BLACK, BLUE, GREEN, CYAN, RED, MAGENTA, BROWN, WHITE,
